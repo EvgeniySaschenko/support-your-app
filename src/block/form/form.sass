@@ -1,0 +1,126 @@
+@keyframes formAnimate
+	0
+		transform: rotateX(-45deg)
+	100%
+		transform: rotateX(0)
+
+
+
+@keyframes formLogoAnimate
+	0
+		transform: rotateX(-90deg)
+	100%
+		transform: rotateX(0)
+
+
+
+@keyframes formLogoAnimate_1
+	0
+		transform: perspective(150px) translateY(-100px) translateZ(100px)
+	100%
+		transform: perspective(0) translateY(0) translateZ(0)
+
+@keyframes formLogoAnimate_2
+	0
+		transform: perspective(150px) translateY(-100px) translateZ(80px)
+	100%
+		transform: perspective(0) translateY(0) translateZ(0)
+
+@keyframes formLogoAnimate_3
+	0
+		transform: perspective(150px) translateY(-100px) translateZ(20px)
+	100%
+		transform: perspective(0) translateY(0) translateZ(0)
+
+@keyframes formLogoAnimate_4
+	0
+		transform: perspective(150px) translateY(-100px) translateZ(60px)
+	100%
+		transform: perspective(0) translateY(0) translateZ(0)
+
+.form
+	position: relative
+	::placeholder
+		font-size: 16px
+		color: rgba($color-1, .3)
+	&_entry-app
+		max-width: 360px
+		width: 100%
+		padding: 79px 20px 40px
+		background-color: rgba(255, 255, 255, .8) 
+		transform: perspective(400px) rotateX(-25deg)
+		transform-origin: top
+		animation: formAnimate .6s forwards
+	&__logo
+		width: 100px
+		height: 100px
+		border-radius: 15px
+		background-color: #ffffff
+		position: absolute
+		top: -50px
+		left: 50%
+		margin-left: -50px
+		box-shadow: 0 0 40px rgba(0,0,0,0.2)
+		transform: perspective(200px) rotateX(60deg)
+		animation: formLogoAnimate .6s forwards
+		&-item
+			height: 30px
+			width: 30px
+			border-radius: 7px
+			opacity: .8
+			position: absolute
+			&_1
+				background-color: orange
+				top: 17px
+				left: 29px
+				transform: perspective(150px) translateY(-100px) translateZ(100px)
+				animation: formLogoAnimate_1 .5s forwards
+			&_2
+				background-color: DeepPink
+				top: 32px
+				left: 43px
+				transform: perspective(150px) translateY(-100px) translateZ(80px)
+				animation: formLogoAnimate_2 .4s forwards
+			&_3
+				background-color: blue
+				top: 47px
+				left: 29px
+				transform: perspective(150px) translateY(-100px) translateZ(20px)
+				animation: formLogoAnimate_3 .3s forwards
+			&_4
+				background-color: green
+				top: 62px
+				left: 43px
+				transform: perspective(150px) translateY(-100px) translateZ(60px)
+				animation: formLogoAnimate_4 .2s forwards
+	&__item
+		margin-bottom: 20px
+	&__field
+		width: 100%
+		padding: 15px 10px
+		&:focus
+			border: 2px solid $color-2
+	&__title
+		font-size: 30px
+		text-align: center
+		margin-bottom: 35px
+		&-small
+			font-size: 15px
+			color: rgba($color-1, .5)
+	&__btn
+		width: 100%
+		margin-top: 20px
+	&__checkbox
+		display: none
+	&__checkbox:checked ~ .form__label-checkbox
+		background-image: url(../img/checkbox.png)
+		background-size: contain
+	&__label
+		cursor: pointer
+	&__label-checkbox
+		margin-right: 7px
+		display: inline-block
+		height: 12px
+		width: 12px
+		background-color: $color-2
+		border-radius: 2px

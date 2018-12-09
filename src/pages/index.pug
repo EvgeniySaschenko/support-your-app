@@ -1,0 +1,28 @@
+extends ../layout/entry-app
+block title 
+	title Doc title
+block meta_k 
+	meta(name="keywords" content="meta_k .........text")
+block meta_d 
+	meta(name="description" content="meta_d ......text")
+
+block main
+	+b.FORM.form_entry-app(action="")
+		+e.logo
+			+e.logo-item_1
+			+e.logo-item_2
+			+e.logo-item_3
+			+e.logo-item_4
+		+e.title
+			+e.title-big QCRM
+			+e.title-small by SupportYourApp
+		+e.item
+			+e.INPUT.field(type="text" name="login" placeholder="Login" required)
+		+e.item
+			+e.INPUT.field(type="password" name="pass" placeholder="Password" required)
+		+e.item
+			+e.INPUT.checkbox(type="checkbox" name="remember" checked).hidden#remember
+			+e.LABEL.label-checkbox(for="remember")
+			+e.LABEL.label(for="remember") Remember me on this computer
+
+		+e.INPUT.btn(type="submit" value="Sign In to QCRM").btn

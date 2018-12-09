@@ -1,0 +1,20 @@
+.wrapper
+	position: relative
+	min-height: 100vh
+	width: 100%
+	background-size: cover
+	background-color: $color-3
+	&_entry-app
+		display: flex
+		align-items: center
+		justify-content: center
+	&.show-bg
+		transition: 2s
+		background-color: transparent
+	&__substrate
+		width: 100%
+		min-height: 100vh
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
